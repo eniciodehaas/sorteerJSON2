@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.header {
+    padding: 1.5em;
+}
+
+.header__titel {
+    font-weight: normal;
+    font-size: 2.7em;
+}
+
+.header__dropdown {
+    margin: 1.5em 0;
+}
+
+.header__radio {
+    margin-left: 1.5em;
+}
+
+.boeken {
+    border-collapse: collapse;
+}
+
+.boeken__kop {
+    background-color: lightgrey;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fec;
+}
+
+.boeken__cover {
+    width: 100px;
+}
+
+.boeken__cel {
+    padding: 1em;
+    vertical-align: top;
+    border-right: 2px solid #fec;
+}
+
+.boeken__cel:nth-child(3) {
+    padding: 0;
+}
+
+.boeken__rij--accent {
+    background-color: #fec;
+}
+
+.boeken__rij--accent .boeken__cel {
+    border-right: 2px solid #fff;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Enicio de Haas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteer JSON</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+    <h1 class="header__titel">Een lijst met boeken</h1>
+    <select id="kenmerk" class="header__dropdown">
+        <option value="titel">titel</option>
+        <option value="auteur">auteur(s)</option>
+        <option value="jsDatum">datum uitgave</option>
+        <option value="paginas">aantal bladzijdes</option>
+        <option value="taal">taal</option>
+        <option value="uitgever">uitgever</option>
+        <option value="prijs">prijs</option>
+    </select>
+
+    <!-- radiobuttons oplopend / aflopend -->
+    <label><input class="header__radio" type="radio" name="oplopend" value="1" checked> oplopend</label>
+    <label><input class="header__radio" type="radio" name="oplopend" value="-1"> aflopend</label>
+
+    </header>
+    <div id="uitvoer"></div>
+    <script src="sorteer.js"></script>
+</body>
+</html>
