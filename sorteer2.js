@@ -6,6 +6,7 @@ xmlhttp.onreadystatechange = function() {
         sorteerObject.voegJSdatumIn();
         sorteerObject.data.forEach( boek => {
             boek.titelHoofdletter = boek.titel.toUpperCase();
+            boek.eersteAuteur = boek.auteur[0];
         });
         sorteerObject.sorteren();
     } 
@@ -128,12 +129,26 @@ let sorteerObject = {
             // prijs van boek maken
             let boekPrijs = document.createElement('div');
             boekPrijs.className = 'boek__prijs';
-            boekPrijs.textContent = '€ '  + boek.prijs;
+            boekPrijs.textContent = boek.prijs.toLocaleString('nl-NL', {currency: 'EUR', style: 'currency'});
+
+            // auteurs van boek toevoegen
+            let boekAuteurs = document.createElement('p')
+            boekAuteurs.className = 'boek__auteur';
+            boek.auteur[0] = keerTekstOm(boek.auteur[0]);
+            boekAuteurs.textContent = maakOpsomming(boek.auteur);
+
+            // overige informatie toevoegen
+            let boekOverig = document.createElement('p');
+            boekOverig.className = 'boek__overig';
+            boekOverig.textContent = boek.uitgave + ' | ' + 'Bladzijden: ' + boek.paginas + ' | ' + boek.taal + ' | ' + 'Ean: ' + boek.ean;
+
 
 
             boekSectie.appendChild(cover);
             boekSectie.appendChild(main);
             main.appendChild(boekTitel);
+            main.appendChild(boekAuteurs);
+            main.appendChild(boekOverig);
             boekSectie.appendChild(boekPrijs);
             document.getElementById('uitvoer').appendChild(boekSectie);
 
