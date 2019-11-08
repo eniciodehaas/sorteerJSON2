@@ -24,34 +24,17 @@ body {
     margin-left: 1.5em;
 }
 
-.boeken {
-    border-collapse: collapse;
+.boek {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 1em;
+    margin-bottom: 1em;
 }
 
-.boeken__kop {
-    background-color: lightgrey;
-    border-bottom: 2px solid #fff;
-    border-right: 2px solid #fec;
+.boek__cover {
+    max-width: 100px;
 }
 
-.boeken__cover {
-    width: 100px;
-}
-
-.boeken__cel {
-    padding: 1em;
-    vertical-align: top;
-    border-right: 2px solid #fec;
-}
-
-.boeken__cel:nth-child(3) {
-    padding: 0;
-}
-
-.boeken__rij--accent {
-    background-color: #fec;
-}
-
-.boeken__rij--accent .boeken__cel {
-    border-right: 2px solid #fff;
+.boek__prijs {
+    font-size: 2em;
 }
